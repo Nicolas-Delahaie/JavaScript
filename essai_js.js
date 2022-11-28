@@ -12,16 +12,16 @@ element.outerHTML                                                       //Tradui
 
 // ------- ELEMENTS ------- 
 //un element est un arbre. Il peut etre une feuille ou bien un noeud que l'on peut manipuler a l'aide des methodes suivantes
-//Recuperer des elements
-const element = document.getElementById('element_id');                  //Recupere l element precis correspondants a l ID en parametre
-const element = document.querySelector("#myId p.article > a");          //Recupere le premier element correspondants a la requete en parametre. Ici : recherche dans l'élément ayant pour id  #myId , les éléments de type  <p>  qui ont pour classe  article , afin de récupérer le lien (  <a>  ) qui est un enfant direct (pas des enfants de ses enfants).
-const elements = document.getElementsByClassName('elements_class');     //Recupere un tableau des elements correspondants a la classe en parametre
-const elements = document.getElementsByTagName('elements_tag');         //Recupere un tableau des elements correspondants a la balise en parametre
 //Modifier des elements
 newElement = document.createElement("div");                             //Cree un nouvel element orphelin
 elementParent.appendChild(newElement);                                  //Assigne l element a un parent
 elementParent.removeChild(element);       
 elementParent.replaceChild(element, newElement);
+//Recuperer des elements
+const element = document.getElementById('element_id');                  //Recupere l element precis correspondants a l ID en parametre
+const element = document.querySelector("#myId p.article > a");          //Recupere le premier element correspondants a la requete en parametre. Ici : recherche dans l'élément ayant pour id  #myId , les éléments de type  <p>  qui ont pour classe  article , afin de récupérer le lien (  <a>  ) qui est un enfant direct (pas des enfants de ses enfants).
+const elements = document.getElementsByClassName('elements_class');     //Recupere un tableau des elements correspondants a la classe en parametre
+const elements = document.getElementsByTagName('elements_tag');         //Recupere un tableau des elements correspondants a la balise en parametre
 //Accesseurs de l element
 element.children;                                                       //retourne la liste des enfants de cet element
 element.parentElement;                                                  //retourne l element parent de celui-ci 
