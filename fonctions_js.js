@@ -1,12 +1,12 @@
-
 <script type="text/javascript" src="index.js" defer></script>           //Dans le fichier html (de preference a la fin)
 
 
 //------- AFFICHAGE -------
 //Pour afficher
 console.log("coucou");                                                  //Pour afficher ce qu'on veut dans la console
+alert("coucou");                                                        //Affiche une fenetre de dialogue avec le message
 element.outerHTML                                                       //Traduit l element en texte lisible
-
+                                       
 
 // ------- ELEMENTS ------- 
 //un element est un arbre. Il peut etre une feuille ou bien un noeud que l'on peut manipuler a l'aide des methodes suivantes
@@ -22,10 +22,10 @@ const elements = document.querySelectorAll("#myId p.article > a");      //Recupe
 const elements = document.getElementsByClassName('elements_class');     //Recupere un tableau des elements correspondants a la classe en parametre
 const elements = document.getElementsByTagName('elements_tag');         //Recupere un tableau des elements correspondants a la balise en parametre
 //Accesseurs de l element
-element.children;                                                       //retourne la liste des enfants de cet element
-element.parentElement;                                                  //retourne l element parent de celui-ci 
-element.nextElementSibling;                                             //retourne l element suivant de meme niveau
-element.previousElementSibling;                                         //retourne l element precedent de meme niveau
+element.children                                                        //retourne la liste des enfants de cet element
+element.parentElement                                                   //retourne l element parent de celui-ci 
+element.nextElementSibling                                              //retourne l element suivant de meme niveau
+element.previousElementSibling                                          //retourne l element precedent de meme niveau
 element.children ("element_id");                                        //comme .children mais ayant pour id 
 element.parentElement ("element_id");                                   //comme .parentElement mais ayant pour id 
 element.nextElementSibling ("element_id");                              //comme .nextElementSibling mais ayant pour id 
@@ -54,8 +54,8 @@ element.removeAttribute("attribut");
 
 // ------- CONTENU -------
 //Pour modifier le ontenu d un element
-element.innerHTML;                                                      //Contenu html de l element                                        
-element.textContent;                                                    //Contenu string de l element
+element.innerHTML                                                       //Contenu html de l element                                        
+element.textContent                                                     //Contenu string de l element
 
 
 // ------- EVENEMENTS ------- 
@@ -63,12 +63,12 @@ element.textContent;                                                    //Conten
 element.addEventListener("event", "fonctionCallback()");                //Ecoute un evenement ("click", "mousemove", "mouseevent", "change", ...) et lance la fonction lorsqu il a lieu
 element.preventDefault();                                               //Retire le comportement par default de l element
 element.stopPropagation();                                              //Empeche le signal d un element de remonter a son parent
-evenement.clientX;                                                      //Position de la souris dans les coordonnées locales (contenu du DOM)
-evenement.offsetX;                                                      //Position de la souris par rapport à l'élément sur lequel on écoute l'événement
-evenement.pageX;                                                        //Position de la souris par rapport au document entier
-evenement.screenX;                                                      //Position de la souris par rapport à la fenêtre du navigateur
-evenement.movementX;                                                    //Position de la souris par rapportà la position de la souris lors du dernier événement  mousemove
-evenement.target;                                                       //Element sur lequel s'est produit l evenement
+evenement.clientX                                                       //Position de la souris dans les coordonnées locales (contenu du DOM)
+evenement.offsetX                                                       //Position de la souris par rapport à l'élément sur lequel on écoute l'événement
+evenement.pageX                                                         //Position de la souris par rapport au document entier
+evenement.screenX                                                       //Position de la souris par rapport à la fenêtre du navigateur
+evenement.movementX                                                     //Position de la souris par rapportà la position de la souris lors du dernier événement  mousemove
+evenement.target                                                        //Element sur lequel s'est produit l evenement
 
 
 //------- REQUETES ------- 
@@ -76,6 +76,5 @@ fetch("http://url-service-web.com/api/users")                           //Envoie
 .then(function(res) {})                                                 //Verifie que la requete s est bien deroulee
 .then(function(value) {})                                               //Recupere la valeur retournee en JSON
 .catch(function(err) {});     
-
 
 
